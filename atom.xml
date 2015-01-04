@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://baselibera.github.io/atom.xml" rel="self"/>
+  <link href="http://baselibera.github.io/"/>
+  <updated>2015-01-04T19:47:57+01:00</updated>
+  <id>http://baselibera.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress: First Steps]]></title>
+    <link href="http://baselibera.github.io/blog/2015/01/04/octopress-first-steps/"/>
+    <updated>2015-01-04T19:30:28+01:00</updated>
+    <id>http://baselibera.github.io/blog/2015/01/04/octopress-first-steps</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
