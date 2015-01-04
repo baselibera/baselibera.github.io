@@ -1,17 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Baselibera user blog]]></title>
   <link href="http://baselibera.github.io/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-04T21:49:55+01:00</updated>
+  <updated>2015-01-04T22:18:18+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Free Base]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress: First Customizations]]></title>
+    <link href="http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations/"/>
+    <updated>2015-01-04T21:53:13+01:00</updated>
+    <id>http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations</id>
+    <content type="html"><![CDATA[<h2>Configuration files</h2>
+
+<table>
+<thead>
+<tr>
+<th>Filename     </th>
+<th>role    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> _config.yml </td>
+<td> Main config file, here there Title, Subtitle, email, date format and other frontend settings</td>
+</tr>
+<tr>
+<td> Rakefile    </td>
+<td> Deployment configuration, need to modifiy especially with rsync </td>
+</tr>
+<tr>
+<td> config.rb   </td>
+<td>  </td>
+</tr>
+<tr>
+<td> config.ru   </td>
+<td>  </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Rakfile properties</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>public_dir</strong>      </td>
+<td> &ldquo;public&rdquo;    </td>
+<td> compiled site directory</td>
+</tr>
+<tr>
+<td><strong>source_dir</strong>      </td>
+<td> &ldquo;source&rdquo;    </td>
+<td> source file directory</td>
+</tr>
+<tr>
+<td>blog_index_dir  </td>
+<td> &lsquo;source&rsquo;    </td>
+<td> directory for your blog&rsquo;s index page (if you put your index in source/blog/index.html, set this to &lsquo;source/blog&rsquo;)</td>
+</tr>
+<tr>
+<td><strong>deploy_dir</strong>      </td>
+<td> &ldquo;_deploy&rdquo;   </td>
+<td> deploy directory (for Github pages deployment)</td>
+</tr>
+<tr>
+<td>stash_dir       </td>
+<td> &ldquo;_stash&rdquo;    </td>
+<td> directory to stash posts for speedy generation</td>
+</tr>
+<tr>
+<td><strong>posts_dir</strong>       </td>
+<td> &ldquo;_posts&rdquo;    </td>
+<td> directory for blog files</td>
+</tr>
+<tr>
+<td><strong>themes_dir</strong>      </td>
+<td> &ldquo;.themes&rdquo;   </td>
+<td> directory for blog files</td>
+</tr>
+<tr>
+<td>new_post_ext    </td>
+<td> &ldquo;markdown&rdquo;  </td>
+<td> default new post file extension when using the new_post task</td>
+</tr>
+<tr>
+<td>new_page_ext    </td>
+<td> &ldquo;markdown&rdquo;  </td>
+<td> default new page file extension when using the new_page task</td>
+</tr>
+<tr>
+<td><strong>server_port</strong>     </td>
+<td> &ldquo;4000&rdquo;      </td>
+<td> port for preview server eg. localhost:4000</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Here are also defined <strong>tasks</strong> for <strong>Jekyll</strong>.</p>
+
+<pre><code>rake list
+</code></pre>
+
+<p>or
+    rake &ndash;tasks</p>
+
+<p>to show all tasks</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress: First Steps]]></title>
