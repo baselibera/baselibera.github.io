@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://baselibera.github.io/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-04T20:59:38+01:00</updated>
+  <updated>2015-01-04T21:49:55+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -80,36 +80,59 @@ Dependencies are now installed, so install the <strong>default theme</strong> (c
 
 <h4>Sequence</h4>
 
-<ul>
-<li>git clone git://github.com/imathis/octopress.git octopress</li>
-<li>cd octopress/</li>
-<li>sudo gem install bundler</li>
-<li>bundle install</li>
-<li>rake install</li>
-<li>rake setup_github_pages</li>
-<li>rake generate</li>
-<li>rake deploy</li>
-<li>rake preview (optional)</li>
-<li>git add .</li>
-<li>git commit -m &lsquo;primo post</li>
-<li>git push origin source</li>
-</ul>
-
+<pre><code>git clone git://github.com/imathis/octopress.git octopress
+cd octopress/
+sudo gem install bundler
+bundle install
+rake install
+rake setup_github_pages
+rake generate
+rake deploy
+rake preview (optional)
+git add .
+git commit -m 'primo post'
+git push origin source
+</code></pre>
 
 <p>If you are restoring an existing project from GitHub</p>
 
-<ul>
-<li>git clone &ndash;branch source git@github.com:baselibera/baselibera.github.io.git OctopresClone
+<pre><code>git clone --branch source git@github.com:baselibera/baselibera.github.io.git OctopresClone 
+rake setup_github_pages (for new directory correct git configuration)
+</code></pre>
 
-<ul>
-<li>rake setup_github_pages (for new directory correct git configuration)</li>
-</ul>
-</li>
-<li></li>
-</ul>
+<p>Create and modify post and pages</p>
 
+<pre><code>cd _deploy
+git commit -a 'publish new content' 
+</code></pre>
 
-<h2>Publish Blog</h2>
+<p>Resolve conflicts</p>
+
+<pre><code>git merge
+git push origin master
+</code></pre>
+
+<p>Source are not updated too.</p>
+
+<p>cd to root octopress install directory
+    git add .
+    git commit -m &lsquo;new page <aboutme>&rsquo;</p>
+
+<p>When update an installation modifed elsewhere you can found some natural conflict in some file.</p>
+
+<pre><code>git pull origin master
+</code></pre>
+
+<p>To resolve:
+edit file manually to resolve conflict, and then</p>
+
+<pre><code>git add atom.xml
+git add sitemap.xml
+git commit -m 'manual merge'
+git pull origin master
+</code></pre>
+
+<h2>Publishing the Blog</h2>
 
 <p>Octopress documentation suggest three typical channel to pubilsh your generated blog contents.</p>
 
