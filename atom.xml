@@ -4,7 +4,7 @@
   <title><![CDATA[Baselibera user blog]]></title>
   <link href="http://baselibera.github.io/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-05T10:09:57+01:00</updated>
+  <updated>2015-01-05T10:29:01+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
     <name><![CDATA[Free Base]]></name>
@@ -262,7 +262,7 @@ Dependencies are now installed, so install the <strong>default theme</strong> (c
 
 <p>Octopress is installed.</p>
 
-<h4>Sequence</h4>
+<h4>Install Sequence</h4>
 
 <pre><code>git clone git://github.com/imathis/octopress.git octopress
 cd octopress/
@@ -314,6 +314,24 @@ edit file manually to resolve conflict, and then</p>
 git add sitemap.xml
 git commit -m 'manual merge'
 git pull origin master
+</code></pre>
+
+<h2>Editing Lifecicle</h2>
+
+<pre><code>rake new_page[] or rake new_post[]
+rake generate
+rake deploy
+rake preview  and rake watch (optional)
+</code></pre>
+
+<p><code>master</code> branch is automatically pushed every time rake deploy is executed.
+<code>source</code>branche needs a manual prepare and push of artifacts, even in the same manner if with non conflicts:</p>
+
+<p>from root install directory:</p>
+
+<pre><code>git add .
+git commit -m 'message'
+git push origin source
 </code></pre>
 
 <h2>Publishing the Blog</h2>
@@ -465,17 +483,6 @@ With:</p>
 
 <p>will generated the <code>source/about/page.html</code> file.
 It will be accessible as <code>http://baselibera.github.io/about/page.html</code></p>
-
-<h2>Editing Lifecicle</h2>
-
-<ul>
-<li><code>rake new_page[]</code> or <code>rake new_post[]</code></li>
-<li>rake generate</li>
-<li>rake deploy</li>
-<li><code>rake preview</code>  and <code>rake watch</code> (optional)</li>
-<li>git commit -a</li>
-</ul>
-
 ]]></content>
   </entry>
   
