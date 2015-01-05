@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Configuration | Baselibera user blog]]></title>
   <link href="http://baselibera.github.io/blog/categories/configuration/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-05T21:07:58+01:00</updated>
+  <updated>2015-01-05T21:55:54+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
     <name><![CDATA[Free Base]]></name>
@@ -18,7 +18,12 @@
     <link href="http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations/"/>
     <updated>2015-01-04T21:53:13+01:00</updated>
     <id>http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations</id>
-    <content type="html"><![CDATA[<h2>Configuration files</h2>
+    <content type="html"><![CDATA[<p>Octopress is a blogging framework from hackers. So said iMathis on Octorpess site. Well here some hacking jots.</p>
+
+<!-- more -->
+
+
+<h2>Configuration files</h2>
 
 <table>
 <thead>
