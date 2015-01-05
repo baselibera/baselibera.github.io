@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Baselibera user blog]]></title>
+  <link href="http://baselibera.github.io/atom.xml" rel="self"/>
+  <link href="http://baselibera.github.io/"/>
+  <updated>2015-01-05T12:47:28+01:00</updated>
+  <id>http://baselibera.github.io/</id>
+  <author>
+    <name><![CDATA[Free Base]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress: First Customizations]]></title>
+    <link href="http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations/"/>
+    <updated>2015-01-04T21:53:13+01:00</updated>
+    <id>http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations</id>
+    <content type="html"><![CDATA[<h2>Configuration files</h2>
+
+<table>
+<thead>
+<tr>
+<th>Filename     </th>
+<th>role    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> _config.yml </td>
+<td> Main config file, here there Title, Subtitle, email, date format and other frontend settings</td>
+</tr>
+<tr>
+<td> Rakefile    </td>
+<td> Deployment configuration, need to modifiy especially with rsync </td>
+</tr>
+<tr>
+<td> config.rb   </td>
+<td>  </td>
+</tr>
+<tr>
+<td> config.ru   </td>
+<td>  </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Rakefile properties</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>public_dir</strong>      </td>
+<td> &ldquo;public&rdquo;    </td>
+<td> compiled site directory</td>
+</tr>
+<tr>
+<td><strong>source_dir</strong>      </td>
+<td> &ldquo;source&rdquo;    </td>
+<td> source file directory</td>
+</tr>
+<tr>
+<td>blog_index_dir  </td>
+<td> &lsquo;source&rsquo;    </td>
+<td> directory for your blog&rsquo;s index page (if you put your index in source/blog/index.html, set this to &lsquo;source/blog&rsquo;)</td>
+</tr>
+<tr>
+<td><strong>deploy_dir</strong>      </td>
+<td> &ldquo;_deploy&rdquo;   </td>
+<td> deploy directory (for Github pages deployment)</td>
+</tr>
+<tr>
+<td>stash_dir       </td>
+<td> &ldquo;_stash&rdquo;    </td>
+<td> directory to stash posts for speedy generation</td>
+</tr>
+<tr>
+<td><strong>posts_dir</strong>       </td>
+<td> &ldquo;_posts&rdquo;    </td>
+<td> directory for blog files</td>
+</tr>
+<tr>
+<td><strong>themes_dir</strong>      </td>
+<td> &ldquo;.themes&rdquo;   </td>
+<td> directory for blog files</td>
+</tr>
+<tr>
+<td>new_post_ext    </td>
+<td> &ldquo;markdown&rdquo;  </td>
+<td> default new post file extension when using the new_post task</td>
+</tr>
+<tr>
+<td>new_page_ext    </td>
+<td> &ldquo;markdown&rdquo;  </td>
+<td> default new page file extension when using the new_page task</td>
+</tr>
+<tr>
+<td><strong>server_port</strong>     </td>
+<td> &ldquo;4000&rdquo;      </td>
+<td> port for preview server eg. localhost:4000</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Here are also defined <strong>tasks</strong> for <strong>Jekyll</strong>.</p>
+
+<pre><code>rake list
+</code></pre>
+
+<p>or</p>
+
+<pre><code>rake --tasks
+</code></pre>
+
+<p>to show all tasks</p>
+
+<h2>Header, Navigation, Footer</h2>
+
+<p><code>/source/_includes/custom/</code></p>
+
+<p>At this path you can find customizable files that preserve contents against update.</p>
+
+<h2>Styles &amp; Color</h2>
+
+<p>In `/sass/base/_theme.scss¡ are are defined all colors.</p>
+
+<p>In <code>/sass/custom/</code> directory we can find files to override default settings. Changing these files we can obtain portable styles and color customization:</p>
+
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_colors.scss</code>     </td>
+<td> Override colors in <code>base/_theme.scss</code> to change color schemes</td>
+</tr>
+<tr>
+<td><code>_styles.scss</code>     </td>
+<td> It&rsquo;s empty and easily override any style (last in the cascade)</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>For example: to change code solarized schema from dark (default) and light, in the <code>_color.scs</code> modifiy:</p>
+
+<pre><code>$solarized: light;
+</code></pre>
+
+<p><a href="http://blog.alestanis.com/2013/02/04/octopress-and-the-twilight-color-scheme/">Here</a> an article for the twilight code color schema.</p>
+
+<p>To help with colors some styles are defined relatively to some main color, for example we have:</p>
+
+<pre><code>$nav-bg: #ccc !default;
+...
+$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11)) !default;
+$nav-color: darken($nav-bg, 38) !default;
+</code></pre>
+
+<p>So if we modify <code>$nav-bg</code> color value in customization file, others are automagically calculated with sass functions. This amazing functions behave too SASS and we can find API definition <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">here</a>. Or from beginning <a href="http://sass-lang.com/documentation/">here</a>. Enjoy!</p>
+
+<p>This <a href="http://hslpicker.com/">link</a> for an online color chooser tool.</p>
+
+<h2>Fonts</h2>
+
+<p>In this directory there&rsquo;s main customization files: <code>/octopress/source/_includes/custom</code>:
+Here there is <code>head.html</code>, it contains font definition from <a href="http://www.google.com/fonts/">Google</a> (something very special to choose a font). Defualt is:</p>
+
+<pre><code>&lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;
+&lt;link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+&lt;link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+</code></pre>
+
+<p>I have chose a font and I have added to HEAD definitio. Because all defined fonts are loaded with page its better to remove fonts unused. I added this:</p>
+
+<pre><code>&lt;link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'&gt;
+</code></pre>
+
+<p>Now you must modify CSSs.</p>
+
+<p><a href="http://octopress.org/docs/theme/template/">http://octopress.org/docs/theme/template/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress: First Steps]]></title>
+    <link href="http://baselibera.github.io/blog/2015/01/04/octopress-first-steps/"/>
+    <updated>2015-01-04T19:30:28+01:00</updated>
+    <id>http://baselibera.github.io/blog/2015/01/04/octopress-first-steps</id>
+    <content type="html"><![CDATA[<h1>Octopress</h1>
+
+<p><a href="http://octopress.org">Octopress</a> 3.0 is a framework to generate static blog web site. It is developed with Ruby and other tools like Rake.
+Octopress is derived from GitHub <a href="https://github.com/mojombo/jekyll">Jekyll</a> framework used with <a href="https://pages.github.com">GitHub Pages</a> service and is compatible with most of its plugin. Octopress would be a better and more friendly Jekyll</p>
+
+<p>Blog site lifecicle is base on writing markdown document, generate a static site and the publish its deployment artifact to some kind of web server.</p>
+
+<p>Octopress is delivered with its own set of plugin to aid blogger to write better article. The framework focuses on the drafting of technical articles based on code publication.</p>
+
+<p>Octopress have a MIT licence</p>
+
+<p><a href="https://github.com/imathis/octopress/wiki/Octopress-Sites/_edit">This</a> is the list of sites based on Octopress.</p>
+
+<h2>Install</h2>
+
+<p>There are two prerequisite: <strong>Git</strong> and <strong>Ruby 1.9.3</strong>.</p>
+
+<p>Clone Octopress project from imathis github repository:</p>
+
+<pre><code>git clone git://github.com/imathis/octopress.git octopress 
+</code></pre>
+
+<p>from inside the new created directory</p>
+
+<pre><code>gem install bundler
+</code></pre>
+
+<p>to do this on Mac OSX you need administrator privileges for writing in Ruby install directory (sudo).</p>
+
+<p>What is bundler?</p>
+
+<blockquote><p>Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
+<a href="http://bundler.io">bundler.io</a></p></blockquote>
+
+<p>In <code>octopress</code> cloned directory there is a <code>Gemfile</code>, so you have to install declared gems for octorpress with this command</p>
+
+<pre><code>bundler install
+</code></pre>
+
+<p>you are asked to type your password to install gems&hellip;
+Dependencies are now installed, so install the <strong>default theme</strong> (classic) that for many reasons is the best:</p>
+
+<pre><code>rake install
+</code></pre>
+
+<p>Rake is a ruby application that substitute the <code>make</code> executable in ruby environment. It is a software task management tools and is able to build ruby applications with <code>Rakefile</code> and <code>.rake</code> configuration files.</p>
+
+<p>To know what task are available in you project directory type:</p>
+
+<pre><code>rake --tasks
+</code></pre>
+
+<p>this reveals that</p>
+
+<p><em>rake install[theme]            # Initial setup for Octopress: copies the default theme into the path of Jekyll&rsquo;s generator</em></p>
+
+<p>All installed themes are in <code>.themes/classic/</code> directory.</p>
+
+<p>Octopress is installed.</p>
+
+<h4>Install Sequence</h4>
+
+<pre><code>git clone git://github.com/imathis/octopress.git octopress
+cd octopress/
+sudo gem install bundler
+bundle install
+rake install
+rake setup_github_pages
+rake generate
+rake deploy
+rake preview (optional)
+git add .
+git commit -m 'primo post'
+git push origin source
+</code></pre>
+
+<p>If you are restoring an existing project from GitHub</p>
+
+<pre><code>git clone --branch source git@github.com:baselibera/baselibera.github.io.git OctopresClone 
+rake setup_github_pages (for new directory correct git configuration)
+</code></pre>
+
+<p>Create and modify post and pages</p>
+
+<pre><code>cd _deploy
+git commit -a 'publish new content' 
+</code></pre>
+
+<p>Resolve conflicts</p>
+
+<pre><code>git merge
+git push origin master
+</code></pre>
+
+<p>Source are not updated too.</p>
+
+<p>cd to root octopress install directory
+    git add .
+    git commit -m &lsquo;new page <aboutme>&rsquo;</p>
+
+<p>When update an installation modifed elsewhere you can found some natural conflict in some file.</p>
+
+<pre><code>git pull origin master
+</code></pre>
+
+<p>To resolve:
+edit file manually to resolve conflict, and then</p>
+
+<pre><code>git add atom.xml
+git add sitemap.xml
+git commit -m 'manual merge'
+git pull origin master
+</code></pre>
+
+<h2>Editing Lifecicle</h2>
+
+<pre><code>rake new_page[] or rake new_post[]
+rake generate
+rake deploy
+rake preview  and rake watch (optional)
+</code></pre>
+
+<p><code>master</code> branch is automatically pushed every time rake deploy is executed.
+<code>source</code>branche needs a manual prepare and push of artifacts, even in the same manner if with non conflicts:</p>
+
+<p>from root install directory:</p>
+
+<pre><code>git add .
+git commit -m 'message'
+git push origin source
+</code></pre>
+
+<h3>GitHub  Pages</h3>
+
+<p>One of the deploy option Octopress present is based on <a href="https://pages.github.com">GitHub Pages</a>.
+This GitHub service permit to publishing a personal website or a project presentation website. In the first case you will have to create a repository for a project with the same name as the username more <code>.github.io</code> postfix.
+In my case this became <strong><code>baselibera.github.io</code></strong>. When create this kind of repository make it public and do not check the Initialize this repository with a README`.</p>
+
+<p>After created verify access from a web browser at <code>http://baselibera.github.io</code>.
+Its SSH URL is: git@github.com:baselibera/baselibera.github.io.git</p>
+
+<p>To configure your Octopress installation to deploy on GitHub Pages execute this command:</p>
+
+<pre><code>rake setup_github_pages
+</code></pre>
+
+<p>From rake tasks help we have that:</p>
+
+<p><em>rake <strong>setup_github_pages</strong>[repo]          # Set up _deploy folder and deploy branch for Github Pages deployment</em></p>
+
+<p>Launching the GitHub Pages setup it ask you about the URL, in my case git@github.com:baselibera/baselibera.github.io.git.</p>
+
+<p>the task act for:</p>
+
+<ul>
+<li>set repository url at git@github.com:baselibera/baselibera.github.io.git</li>
+<li>add a remote git@github.com:baselibera/baselibera.github.io.git as origin</li>
+<li>set <code>origin</code> as default remote</li>
+<li>rename Master branch to &lsquo;source&rsquo; for committing your blog source files</li>
+<li>remove old <code>deploy</code> directory and create a new one</li>
+<li>in the deploy directory initialize an empty Git repository in /Users/jolab/octopress/_deploy/.git/</li>
+<li>commit the master</li>
+<li>add the index.html to git control</li>
+</ul>
+
+
+<p>all these comments are outputs on console, the execution at least says:
+*Now you can deploy to git@github.com:baselibera/baselibera.github.io.git with <code>rake deploy</code> *</p>
+
+<p>But there is nothing to really deploy to GitHub Pages in _deploy directory.
+First you must generate something:</p>
+
+<pre><code>rake generate
+</code></pre>
+
+<p>This genearte files of your static blog to <code>/public</code> directory. Now deploy it:</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>After commit all:</p>
+
+<pre><code>git add .
+git commit -m 'first octopress commit'
+git push origin source
+</code></pre>
+
+<p>Now you have two <strong>branch</strong> of your GitHub Pages repository</p>
+
+<ul>
+<li><strong>master</strong>: for publish contents</li>
+<li><strong>source</strong>: source from wich your public and then your _deploy directory are populated after generation and deploy.</li>
+</ul>
+
+
+<h4>How to clone an existing GitHub Pages Octopress source</h4>
+
+<pre><code>git clone --branch source git@github.com:baselibera/baselibera.github.io.git OctopressGitHub
+</code></pre>
+
+<h3>Heroku</h3>
+
+<h3>Rsync</h3>
+
+<p>This is a tool to syncing your local Octopress deploy directory with your hostinf server. This tool require SSH access to your server.</p>
+
+<h2>Blogging</h2>
+
+<p>There are two main default type of content in Octopress:</p>
+
+<ul>
+<li>posts</li>
+<li>pages</li>
+</ul>
+
+
+<h3>Posts</h3>
+
+<p>So there are two rale tasks to help to create theese:</p>
+
+<pre><code>rake new_post["My post title"]
+</code></pre>
+
+<p>this task create the <strong><code>source/_posts/2015-01-04-octopress-how-to-begin.markdown</code></strong> file.</p>
+
+<p>`source/_posts/&lsquo; directory is the repository for contents and file names contains generation date and have a markdown extension. This is one of the main reason I have explored Octopress: <em>Markdown native contents management</em>.</p>
+
+<p>This file contain a <strong>yaml</strong> front matter that is used by jekyll to process file.</p>
+
+<pre><code>---
+layout: post
+title: "Octopress: how to begin"
+date: 2015-01-04 10:55:55 +0100
+comments: true
+categories:
+---
+</code></pre>
+
+<p>The most are clear. Categories can be expressed with a single string, with an array of strings: [catname1, catname2, catname3], or as a markdown list</p>
+
+<pre><code>- catname1
+- catname2
+- catname3
+</code></pre>
+
+<h3>Pages</h3>
+
+<p>The main difference with post is that pages are not listed in home page as blog articles.
+With:</p>
+
+<pre><code>rake new_page[whoami]
+</code></pre>
+
+<p>we can generate an Octopress page in</p>
+
+<pre><code>source/whoami/index.markdown
+</code></pre>
+
+<p>Also this is a markdown file and have a fron matter in <strong>yaml</strong>.</p>
+
+<p>It is accessible with <code>http://baselibera.github.io/whoami/</code></p>
+
+<p>If you use instead:</p>
+
+<pre><code>rake new_page[about/page.html]
+</code></pre>
+
+<p>will generated the <code>source/about/page.html</code> file.
+It will be accessible as <code>http://baselibera.github.io/about/page.html</code></p>
+]]></content>
+  </entry>
+  
+</feed>

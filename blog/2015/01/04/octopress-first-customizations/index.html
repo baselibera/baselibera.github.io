@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress: First Customizations - Baselibera user blog</title>
+  <meta name="author" content="Free Base">
+
+  
+  <meta name="description" content="Configuration files Filename role _config.yml Main config file, here there Title, Subtitle, email, date format and other frontend settings Rakefile &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Baselibera user blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Baselibera user blog</a></h1>
+  
+    <h2>Writing something to remember how to hack something.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="baselibera.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/aboutme">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Octopress: First Customizations</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-04T21:53:13+01:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:53 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Configuration files</h2>
+
+<table>
+<thead>
+<tr>
+<th>Filename     </th>
+<th>role    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> _config.yml </td>
+<td> Main config file, here there Title, Subtitle, email, date format and other frontend settings</td>
+</tr>
+<tr>
+<td> Rakefile    </td>
+<td> Deployment configuration, need to modifiy especially with rsync </td>
+</tr>
+<tr>
+<td> config.rb   </td>
+<td>  </td>
+</tr>
+<tr>
+<td> config.ru   </td>
+<td>  </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Rakefile properties</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>public_dir</strong>      </td>
+<td> &ldquo;public&rdquo;    </td>
+<td> compiled site directory</td>
+</tr>
+<tr>
+<td><strong>source_dir</strong>      </td>
+<td> &ldquo;source&rdquo;    </td>
+<td> source file directory</td>
+</tr>
+<tr>
+<td>blog_index_dir  </td>
+<td> &lsquo;source&rsquo;    </td>
+<td> directory for your blog&rsquo;s index page (if you put your index in source/blog/index.html, set this to &lsquo;source/blog&rsquo;)</td>
+</tr>
+<tr>
+<td><strong>deploy_dir</strong>      </td>
+<td> &ldquo;_deploy&rdquo;   </td>
+<td> deploy directory (for Github pages deployment)</td>
+</tr>
+<tr>
+<td>stash_dir       </td>
+<td> &ldquo;_stash&rdquo;    </td>
+<td> directory to stash posts for speedy generation</td>
+</tr>
+<tr>
+<td><strong>posts_dir</strong>       </td>
+<td> &ldquo;_posts&rdquo;    </td>
+<td> directory for blog files</td>
+</tr>
+<tr>
+<td><strong>themes_dir</strong>      </td>
+<td> &ldquo;.themes&rdquo;   </td>
+<td> directory for blog files</td>
+</tr>
+<tr>
+<td>new_post_ext    </td>
+<td> &ldquo;markdown&rdquo;  </td>
+<td> default new post file extension when using the new_post task</td>
+</tr>
+<tr>
+<td>new_page_ext    </td>
+<td> &ldquo;markdown&rdquo;  </td>
+<td> default new page file extension when using the new_page task</td>
+</tr>
+<tr>
+<td><strong>server_port</strong>     </td>
+<td> &ldquo;4000&rdquo;      </td>
+<td> port for preview server eg. localhost:4000</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Here are also defined <strong>tasks</strong> for <strong>Jekyll</strong>.</p>
+
+<pre><code>rake list
+</code></pre>
+
+<p>or</p>
+
+<pre><code>rake --tasks
+</code></pre>
+
+<p>to show all tasks</p>
+
+<h2>Header, Navigation, Footer</h2>
+
+<p><code>/source/_includes/custom/</code></p>
+
+<p>At this path you can find customizable files that preserve contents against update.</p>
+
+<h2>Styles &amp; Color</h2>
+
+<p>In `/sass/base/_theme.scss¡ are are defined all colors.</p>
+
+<p>In <code>/sass/custom/</code> directory we can find files to override default settings. Changing these files we can obtain portable styles and color customization:</p>
+
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_colors.scss</code>     </td>
+<td> Override colors in <code>base/_theme.scss</code> to change color schemes</td>
+</tr>
+<tr>
+<td><code>_styles.scss</code>     </td>
+<td> It&rsquo;s empty and easily override any style (last in the cascade)</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>For example: to change code solarized schema from dark (default) and light, in the <code>_color.scs</code> modifiy:</p>
+
+<pre><code>$solarized: light;
+</code></pre>
+
+<p><a href="http://blog.alestanis.com/2013/02/04/octopress-and-the-twilight-color-scheme/">Here</a> an article for the twilight code color schema.</p>
+
+<p>To help with colors some styles are defined relatively to some main color, for example we have:</p>
+
+<pre><code>$nav-bg: #ccc !default;
+...
+$nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11)) !default;
+$nav-color: darken($nav-bg, 38) !default;
+</code></pre>
+
+<p>So if we modify <code>$nav-bg</code> color value in customization file, others are automagically calculated with sass functions. This amazing functions behave too SASS and we can find API definition <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">here</a>. Or from beginning <a href="http://sass-lang.com/documentation/">here</a>. Enjoy!</p>
+
+<p>This <a href="http://hslpicker.com/">link</a> for an online color chooser tool.</p>
+
+<h2>Fonts</h2>
+
+<p>In this directory there&rsquo;s main customization files: <code>/octopress/source/_includes/custom</code>:
+Here there is <code>head.html</code>, it contains font definition from <a href="http://www.google.com/fonts/">Google</a> (something very special to choose a font). Defualt is:</p>
+
+<pre><code>&lt;!--Fonts from Google"s Web font directory at http://google.com/webfonts --&gt;
+&lt;link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+&lt;link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"&gt;
+</code></pre>
+
+<p>I have chose a font and I have added to HEAD definitio. Because all defined fonts are loaded with page its better to remove fonts unused. I added this:</p>
+
+<pre><code>&lt;link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'&gt;
+</code></pre>
+
+<p>Now you must modify CSSs.</p>
+
+<p><a href="http://octopress.org/docs/theme/template/">http://octopress.org/docs/theme/template/</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Free Base</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-01-04T21:53:13+01:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:53 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/configuration/'>configuration</a>, <a class='category' href='/blog/categories/layout/'>layout</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/template/'>template</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations/" data-via="" data-counturl="http://baselibera.github.io/blog/2015/01/04/octopress-first-customizations/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/01/04/octopress-first-steps/" title="Previous Post: Octopress: first steps">&laquo; Octopress: first steps</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/octopress-first-customizations/">Octopress: First Customizations</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/04/octopress-first-steps/">Octopress: First Steps</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Free Base -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
