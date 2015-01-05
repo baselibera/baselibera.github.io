@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Baselibera user blog]]></title>
   <link href="http://baselibera.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-05T21:55:54+01:00</updated>
+  <updated>2015-01-05T23:32:40+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
     <name><![CDATA[Free Base]]></name>
@@ -21,7 +21,10 @@
     <content type="html"><![CDATA[<h1>Octopress</h1>
 
 <p><a href="http://octopress.org">Octopress</a> 3.0 is a framework to generate static blog web site. It is developed with Ruby and other tools like Rake.
-Octopress is derived from GitHub <a href="https://github.com/mojombo/jekyll">Jekyll</a> framework used with <a href="https://pages.github.com">GitHub Pages</a> service and is compatible with most of its plugin. Octopress would be a better and more friendly Jekyll</p>
+Octopress is derived from GitHub <a href="https://github.com/mojombo/jekyll">Jekyll</a> framework used with <a href="https://pages.github.com">GitHub Pages</a> service and is compatible with most of its plugin. Octopress would be a better and more friendly then Jekyll.</p>
+
+<!-- more -->
+
 
 <p>Blog site lifecicle is base on writing markdown document, generate a static site and the publish its deployment artifact to some kind of web server.</p>
 
