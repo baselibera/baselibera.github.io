@@ -4,7 +4,13 @@ title: "Octopress: first customizations"
 date: 2015-01-04 21:53:13 +0100
 comments: true
 categories: 
+- Octopress 
+- configuration
+- template
+- layout
+
 ---
+
 ## Configuration files
 
 |Filename     |role    |
@@ -15,7 +21,7 @@ categories:
 | config.ru   |  |
 
 
-### Rakfile properties
+### Rakefile properties
 
 |Property|Default value|Description|
 |------------|----------|-----------|
@@ -91,10 +97,18 @@ I have chose a font and I have added to HEAD definitio. Because all defined font
 
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
 
-Now you must modify CSSs.
+Now you must modify CSSs in /sass/custom/_fonts.scss.
 
 <http://octopress.org/docs/theme/template/>
 
+## Layout
+All concern layout is resumed in 
+In `/sass/base/_layout.scss` are defined Responsive layouts defaults.
 
+In `/sass/custom/_layout.scss - We can change settings for easy customization, overriding settings for base/_layout.scss and to change the layout.
+
+Here for example we can indent correctly lists items, that by default have text aligned with content text (wrong IMHO), setting to true:
+
+	$indented-lists: true; 
 
 

@@ -4,6 +4,14 @@ title: "Octopress: first steps"
 date: 2015-01-04 19:30:28 +0100
 comments: true
 categories: 
+- Octopress
+- configuration
+- install
+- git
+- GitHub
+- Ruby
+- Gems
+
 ---
 # Octopress #
 
@@ -128,19 +136,10 @@ from root install directory:
 	git push origin source
 	
 
-## Publishing the Blog ##
-
-Octopress documentation suggest three typical channel to pubilsh your generated blog contents.
-
-- GitHub Pages
-- Heroku
-- Rsync
-
-You can always use an ftp to copy the generated static content to your hosting server.
-
 ### GitHub  Pages ###
-[GitHub Pages](https://pages.github.com) provides publishing a personal website or project. In the first case you will have to create a repository for a project with the same name as the username more `.github.io` postfix.
-In my case this became `baselibera.github.io`. When create this kind of repository make it public and do not check the Initialize this repository with a README`.
+One of the deploy option Octopress present is based on [GitHub Pages](https://pages.github.com).
+This GitHub service permit to publishing a personal website or a project presentation website. In the first case you will have to create a repository for a project with the same name as the username more `.github.io` postfix.
+In my case this became **`baselibera.github.io`**. When create this kind of repository make it public and do not check the Initialize this repository with a README`.
 
 After created verify access from a web browser at `http://baselibera.github.io`.
 Its SSH URL is: git@github.com:baselibera/baselibera.github.io.git
@@ -184,7 +183,7 @@ After commit all:
 	git commit -m 'first octopress commit'
 	git push origin source
 
-Now you have two branch of your GitHub Pages repository
+Now you have two **branch** of your GitHub Pages repository
 
 - **master**: for publish contents
 - **source**: source from wich your public and then your _deploy directory are populated after generation and deploy. 
