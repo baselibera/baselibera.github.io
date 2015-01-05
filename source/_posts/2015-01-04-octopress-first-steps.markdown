@@ -59,7 +59,7 @@ All installed themes are in `.themes/classic/` directory.
 
 Octopress is installed.
 
-#### Sequence
+#### Install Sequence
 
 	git clone git://github.com/imathis/octopress.git octopress
 	cd octopress/
@@ -109,6 +109,24 @@ edit file manually to resolve conflict, and then
 	git pull origin master
 
 
+
+## Editing Lifecicle ##
+
+
+	rake new_page[] or rake new_post[]
+	rake generate
+	rake deploy
+	rake preview  and rake watch (optional)
+
+`master` branch is automatically pushed every time rake deploy is executed.
+`source`branche needs a manual prepare and push of artifacts, even in the same manner if with non conflicts:
+
+from root install directory:
+
+	git add .
+	git commit -m 'message'
+	git push origin source
+	
 
 ## Publishing the Blog ##
 
@@ -239,11 +257,3 @@ will generated the `source/about/page.html` file.
 It will be accessible as `http://baselibera.github.io/about/page.html`
 
 
-## Editing Lifecicle ##
-
-
-- `rake new_page[]` or `rake new_post[]`
-- rake generate
-- rake deploy
-- `rake preview`  and `rake watch` (optional)
-- git commit -a
