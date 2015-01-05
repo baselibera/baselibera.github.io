@@ -9,7 +9,10 @@
   <meta name="author" content="Free Base">
 
   
-  <meta name="description" content="Configuration files Filename role _config.yml Main config file, here there Title, Subtitle, email, date format and other frontend settings Rakefile &hellip;">
+  <meta name="description" content="There is a lot of on line tools for every kind of needs. I know few of them, but here I resume some of these: Name
+Category
+Comment Json
+format Json &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +69,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/05/on-line-useful-web-tools/">On-Line Useful Web Tools</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-05T13:15:52+01:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:15 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There is a lot of on line tools for every kind of needs. I know few of them, but here I resume some of these:</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Category</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Json</td>
+<td>format Json string so you can reasonably read it</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com/fonts">Google Fonts</a></td>
+<td>Web Fonts</td>
+<td>A tool to search, select and import link to web fonts. With load evaluation. Amazing.</td>
+</tr>
+<tr>
+<td><a href="http://hslpicker.com">HLS Picker</a></td>
+<td>Color picker</td>
+<td> Simple and powerful tool to obtain color code from settings its property</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -261,9 +321,21 @@ Here there is <code>head.html</code>, it contains font definition from <a href="
 <pre><code>&lt;link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'&gt;
 </code></pre>
 
-<p>Now you must modify CSSs.</p>
+<p>Now you must modify CSSs in /sass/custom/_fonts.scss.</p>
 
 <p><a href="http://octopress.org/docs/theme/template/">http://octopress.org/docs/theme/template/</a></p>
+
+<h2>Layout</h2>
+
+<p>All concern layout is resumed in
+In <code>/sass/base/_layout.scss</code> are defined Responsive layouts defaults.</p>
+
+<p>In `/sass/custom/<em>layout.scss - We can change settings for easy customization, overriding settings for base/</em>layout.scss and to change the layout.</p>
+
+<p>Here for example we can indent correctly lists items, that by default have text aligned with content text (wrong IMHO), setting to true:</p>
+
+<pre><code>$indented-lists: true; 
+</code></pre>
 </div>
   
   
@@ -579,6 +651,10 @@ It will be accessible as <code>http://baselibera.github.io/about/page.html</code
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/05/on-line-useful-web-tools/">On-Line Useful Web Tools</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/01/04/octopress-first-customizations/">Octopress: First Customizations</a>

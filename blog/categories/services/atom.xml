@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Services | Baselibera user blog]]></title>
+  <link href="http://baselibera.github.io/blog/categories/services/atom.xml" rel="self"/>
+  <link href="http://baselibera.github.io/"/>
+  <updated>2015-01-05T19:38:05+01:00</updated>
+  <id>http://baselibera.github.io/</id>
+  <author>
+    <name><![CDATA[Free Base]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[On-Line Useful Web Tools]]></title>
+    <link href="http://baselibera.github.io/blog/2015/01/05/on-line-useful-web-tools/"/>
+    <updated>2015-01-05T13:15:52+01:00</updated>
+    <id>http://baselibera.github.io/blog/2015/01/05/on-line-useful-web-tools</id>
+    <content type="html"><![CDATA[<p>There is a lot of on line tools for every kind of needs. I know few of them, but here I resume some of these:</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Category</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Json</td>
+<td>format Json string so you can reasonably read it</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com/fonts">Google Fonts</a></td>
+<td>Web Fonts</td>
+<td>A tool to search, select and import link to web fonts. With load evaluation. Amazing.</td>
+</tr>
+<tr>
+<td><a href="http://hslpicker.com">HLS Picker</a></td>
+<td>Color picker</td>
+<td> Simple and powerful tool to obtain color code from settings its property</td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Template | Baselibera user blog]]></title>
   <link href="http://baselibera.github.io/blog/categories/template/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-05T12:47:28+01:00</updated>
+  <updated>2015-01-05T19:38:05+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
     <name><![CDATA[Free Base]]></name>
@@ -191,9 +191,21 @@ Here there is <code>head.html</code>, it contains font definition from <a href="
 <pre><code>&lt;link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'&gt;
 </code></pre>
 
-<p>Now you must modify CSSs.</p>
+<p>Now you must modify CSSs in /sass/custom/_fonts.scss.</p>
 
 <p><a href="http://octopress.org/docs/theme/template/">http://octopress.org/docs/theme/template/</a></p>
+
+<h2>Layout</h2>
+
+<p>All concern layout is resumed in
+In <code>/sass/base/_layout.scss</code> are defined Responsive layouts defaults.</p>
+
+<p>In `/sass/custom/<em>layout.scss - We can change settings for easy customization, overriding settings for base/</em>layout.scss and to change the layout.</p>
+
+<p>Here for example we can indent correctly lists items, that by default have text aligned with content text (wrong IMHO), setting to true:</p>
+
+<pre><code>$indented-lists: true; 
+</code></pre>
 ]]></content>
   </entry>
   
