@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Baselibera user blog]]></title>
   <link href="http://baselibera.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-05T19:38:05+01:00</updated>
+  <updated>2015-01-05T21:07:58+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
     <name><![CDATA[Free Base]]></name>
@@ -18,7 +18,7 @@
     <link href="http://baselibera.github.io/blog/2015/01/05/on-line-useful-web-tools/"/>
     <updated>2015-01-05T13:15:52+01:00</updated>
     <id>http://baselibera.github.io/blog/2015/01/05/on-line-useful-web-tools</id>
-    <content type="html"><![CDATA[<p>There is a lot of on line tools for every kind of needs. I know few of them, but here I resume some of these:</p>
+    <content type="html"><![CDATA[<p>There&rsquo;s a lot of on-line tools for every kind of needs. I know few of them, but here I wish to resume some of these particularly useful for developers:</p>
 
 <table>
 <thead>
@@ -30,9 +30,14 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td>Json</td>
-<td>format Json string so you can reasonably read it</td>
+<td><a href="http://www.freeformatter.com/">Free Formatter</a></td>
+<td>Formatter, Validator</td>
+<td>Format, Validate, Convert Json, Xml, Html string so you can reasonably read it. C</td>
+</tr>
+<tr>
+<td><a href="http://jsonformatter.curiousconcept.com/">JSON &hellip;</a></td>
+<td>JSON</td>
+<td>Formatter&amp; validator, JsonPath tester, JsonSelect tester</td>
 </tr>
 <tr>
 <td><a href="http://www.google.com/fonts">Google Fonts</a></td>
