@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://baselibera.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Baselibera user blog
+subtitle: Writing something to remember how to hack something.
+author: Free Base
 simple_search: https://www.google.com/search
-description:
+description: I hope to collect jots about things that often return and drive me crazy.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

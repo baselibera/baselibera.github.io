@@ -8,3 +8,19 @@
 //$heading-font-family: "Verdana", sans-serif;
 //$header-title-font-family: "Futura", sans-serif;
 //$header-subtitle-font-family: "Futura", sans-serif;
+
+$heading-font-family: "Open Sans", sans-serif;
+$header-title-font-family: $heading-font-family, sans-serif;
+$header-subtitle-font-family: $heading-font-family, sans-serif;
+
+$sans: "Open Sans", "Helvetica Neue", Arial, sans-serif !default;
+$serif: "Open Sans", Georgia, Times, "Times New Roman", serif !default;
+
+
+//$blockquote: $type-border;
+//$sans: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+//$serif: "Open Sans", Georgia, Times, "Times New Roman", serif;
+//$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+//$heading-font-family: "Open Sans", "Georgia", "Helvetica Neue", Arial, sans-serif;
+//$header-title-font-family: $heading-font-family;
+//$header-subtitle-font-family: $heading-font-family;
