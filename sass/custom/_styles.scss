@@ -19,4 +19,6 @@ td,th {
 }
 th {
 	padding: 5px 10px;	
+    font-weight: bold;
+    background-color: desaturate(lighten(#428bca, 30), 5);
 }
