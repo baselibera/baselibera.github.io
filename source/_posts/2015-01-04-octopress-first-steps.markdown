@@ -61,28 +61,56 @@ Octopress is installed.
 
 #### Sequence
 
--  git clone git://github.com/imathis/octopress.git octopress
--  cd octopress/
--  sudo gem install bundler
--  bundle install
--  rake install
--  rake setup_github_pages
--  rake generate
--  rake deploy
--  rake preview (optional)
--  git add .
--  git commit -m 'primo post
--  git push origin source
-
+	git clone git://github.com/imathis/octopress.git octopress
+	cd octopress/
+	sudo gem install bundler
+	bundle install
+	rake install
+	rake setup_github_pages
+	rake generate
+	rake deploy
+	rake preview (optional)
+	git add .
+	git commit -m 'primo post'
+	git push origin source
 
 
 If you are restoring an existing project from GitHub
 
-- git clone --branch source git@github.com:baselibera/baselibera.github.io.git OctopresClone 
-- rake setup_github_pages (for new directory correct git configuration)
-- 
+	git clone --branch source git@github.com:baselibera/baselibera.github.io.git OctopresClone 
+	rake setup_github_pages (for new directory correct git configuration)
 
-## Publish Blog ##
+Create and modify post and pages
+
+	cd _deploy
+	git commit -a 'publish new content' 
+
+Resolve conflicts
+
+	git merge
+	git push origin master
+
+Source are not updated too.
+
+cd to root octopress install directory
+	git add .
+	git commit -m 'new page <aboutme>'
+
+When update an installation modifed elsewhere you can found some natural conflict in some file.
+
+	git pull origin master
+	
+To resolve:
+edit file manually to resolve conflict, and then
+
+	git add atom.xml
+	git add sitemap.xml
+	git commit -m 'manual merge'
+	git pull origin master
+
+
+
+## Publishing the Blog ##
 
 Octopress documentation suggest three typical channel to pubilsh your generated blog contents.
 
@@ -92,7 +120,7 @@ Octopress documentation suggest three typical channel to pubilsh your generated 
 
 You can always use an ftp to copy the generated static content to your hosting server.
 
-### GitHub  Pages###
+### GitHub  Pages ###
 [GitHub Pages](https://pages.github.com) provides publishing a personal website or project. In the first case you will have to create a repository for a project with the same name as the username more `.github.io` postfix.
 In my case this became `baselibera.github.io`. When create this kind of repository make it public and do not check the Initialize this repository with a README`.
 
