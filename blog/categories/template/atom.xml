@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Template | Baselibera user blog]]></title>
+  <title><![CDATA[Category: Template | Baselibera Blog]]></title>
   <link href="http://baselibera.github.io/blog/categories/template/atom.xml" rel="self"/>
   <link href="http://baselibera.github.io/"/>
-  <updated>2015-01-05T23:32:40+01:00</updated>
+  <updated>2015-01-06T08:32:40+01:00</updated>
   <id>http://baselibera.github.io/</id>
   <author>
-    <name><![CDATA[Free Base]]></name>
+    <name><![CDATA[Free Base Author]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
